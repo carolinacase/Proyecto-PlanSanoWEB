@@ -2,15 +2,14 @@
 *{
     padding: 0;
     margin: 0;
-     box-sizing: border-box; /*Esto mantiene el ancho y alto a pesar del padding y el border */
-     font-family: 'Inconsolata',monospace;
-     list-style: none; /* Quita los puntos al inicio de la lista */
-     text-decoration: none;
-     color: white
+    box-sizing: border-box;
+    font-family: 'Inconsolata',monospace;
+    text-decoration: none;
+    color: white
 }
 header{
-    position: fixed;/*esto hace que el header se quede en la parte posterior*/
-    right: 0;
+    position: fixed;
+    left: 0;
     top: 0;
     z-index: 100;/*esto hace que el header se muetre por encima*/
     width: 100%;
@@ -19,12 +18,13 @@ header{
     justify-content: space-between; /*que los elementos se separen*/
     padding: 15px 3%;
     background-color: transparent;
+    transition: transform 0.3s ease;
 }
 
 html, body {
-    background: linear-gradient(90deg,#77B0AA,#135D66, #003C43); /*Colores degragrado de fondo */
-    height: 100%;       /* Asegura que el contenido ocupa al menos el 100% de la altura */
-    margin: 0;          /* Elimina márgenes predeterminados */
+    background: linear-gradient(90deg,#77B0AA,#135D66, #003C43); /*Colores de fondo */
+    height: 100%;       /* altura del contenido */
+    margin: 0;          
     padding: 0%;
     box-sizing: border-box;
     overflow-x: hidden; /* Evita desplazamiento horizontal */
@@ -38,20 +38,46 @@ html, body {
     font-weight: 700px;
 }
 
-.navlist {
-    display: flex; /*esto es para que los elementos Ul se pongan en horizontal*/
+/*DETALLES DEL NAVBAR*/
+.navbar {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start; /* Asegura que los elementos estén alineados a la izquierda */
+    background-color: transparent; /* Deja el fondo transparente cuando no se haga scroll */
+    transition: background-color 0.3s ease; /* Transición para el color de fondo */
 }
-.navlist a {
+
+.navbar.scrolled {
+    background-color: #333; /* Fondo oscuro cuando se hace scroll */
+    color: black;
+    box-shadow: 0px 4px 7px #777; /* Sombra para darle un efecto elevado */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
     margin-left: 60px;
     font-size: 20px;
-    font-weight: 600px;
+    font-weight: 600;
     border-bottom: 2px solid transparent;
-    transition: all .5s ease;
+    transition: all 0.5s ease; /* Transiciones suaves */
 }
 
-.navlist a:hover {
-    border-bottom: 2px solid white; /*este es un subrayado blanco que aparecera cuando hacemos hover*/
+.navbar a:hover {
+    border-bottom: 2px solid white; /* Cambia el borde en hover */
+}
 
+
+section {
+    position: relative;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    align-content: center;
+}
+.content {
+    height: 2000px; /* Just to make the page scrollable */
 }
 #menu-icon {
     display: none; /*para que no se vea almenos que se colapce la pagina */
@@ -68,12 +94,7 @@ html, body {
 #menu-action{
     display: block; /*para que no se pueda hacer click */
 }
-section {
-    position: relative;
-    padding: 60px 20px;
-    margin-bottom: 40px;
-    align-content: center;
-}
+
 .hero {
     font-family: 'Roboto mono', monospace;
     height: 100%;
@@ -88,8 +109,7 @@ section {
     margin-right: auto;
     }
     
-   
-    /* Asegurando que el texto esté centrado en el lado derecho */
+
     .hero-text {
         text-align:justify;
         margin-right: 30px; /* Asegura que tenga un margen derecho */
@@ -135,25 +155,11 @@ section {
     opacity: 0.7;
 }
 
-
-.hero-text a:hover {
-    background-color: transparent;
-    border: 1px solid white;
-    transform: translateX(8px);
-
-}
-
-/* Efecto hover en los enlaces */
-a:hover {
-    color: #f39c12; /* Cambio de color cuando el cursor pasa sobre el enlace */
-    text-decoration: underline;
-}
-
-/* Efecto hover en los botones */
 button:hover {
     background-color: #555; /* Cambio de color de fondo */
     cursor: pointer;
 }
+/*DETALLES DE LOS ICONOS LATERALES */
 
 .icons {
     position: absolute;

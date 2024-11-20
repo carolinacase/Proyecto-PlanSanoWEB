@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- titulo -->
     <title>Carolina Case web</title>
+
     <!-- Css -->
     <link rel="stylesheet" href="style.css">
 
@@ -18,86 +20,90 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
 
 </head>
 
 
 <body>
-    <div class="main-container"></div>
+    
     <!-- JavaScript-->
     <script src="script.js"></script>
     
     <!-- Cabecera de la página web -->
     <header>
-        <!-- Logo -->
-        <a href="#" class="logo">Mi Portfolio</a>
+         <!-- Logo -->
+         <a href="#" class="logo">Carolina Case</a>
 
-        <!-- Truco para que el botón sea clickeable sin usar Javascript -->
-        <input type="checkbox" name="checkbox" id="menu-toggle">   
-        <label for="menu-toggle">
-            <div class='bx bx-menu-alt-right' id="menu-icon"></div>
-        </label>
+         <!-- Truco para que el botón sea clickeable sin usar Javascript -->
+         <input type="checkbox" name="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle">
+
+              <div class='bx bx-menu-alt-right' id="menu-icon"></div>
+
+            </label>
+
         
-        <ul class="navlist">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <ul class="navbar">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
     </header>
 
-    <!-- Hero section -->
-    <section class="hero">
+        <!-- Hero section // seccion destacada -->
 
-        <div class="hero-text">
+        <section class="hero">
 
-            <span>¡Hola! Soy Carolina,una desarrolladora web apasionada
-                por crear experiencias digitales atractivas y funcionales.
-                En este portafolio comparto algunos de mis proyectos,
-                 donde uso tecnologías como HTML, CSS, JavaScript y React.</span><br>
+            <div class="hero-text"> 
 
-          
+                <h1>Hi!</h1><h2>I'm Caro and I'm a Web Developer</h2><br>
+                <h3>This portfolio shares my journey to becoming a web developer.</h3><br>
 
-            <h2>Diseño y Desarrollo web</h2>
-            
-            <h3>Gestión eficiente para servicios y productos web</h3>
+                <a href="CV Desarrolladora Web .pdf">CV</a>
+                <a href="#">Conocé mis proyectos</a>
 
+            </div>
 
-            <a href="CV Desarrolladora Web .pdf">Ver mi CV</a>
-            <a href="#">Conocé mis proyectos</a>
-        </div>
+            <div class="hero-img">
+                <img src="/assets/imgs/carolinacase.png" alt="foto de Carolina case ">
+            </div>
 
-        <div class="hero-img">
-            <img src="/assets/imgs/carolinacase.png" alt="foto de Carolina case ">
-        </div>
+        </section>
+            <!-- ICONOS LATERALES -->
 
-    </section>
+            <div class="icons">
 
-    <div class="icons">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/carolinacase/" target="_blank">
-            <i class="ri-linkedin-box-fill"></i>
-        </a>
+              <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/carolinacase/" target="_blank">
+                 <i class="ri-linkedin-box-fill"></i>
+                </a>
 
-        <!-- GitHub -->
-        <a href="https://github.com/carolinacase" target="_blank">
-            <i class="ri-github-fill"></i>
-        </a>
-        <!-- Email -->
-        <a href="https://github.com/carolinacase" target="_blank">
-            <i class="ri-github-fill"></i>
-        </a>
-    </div>
+              <!-- GitHub -->
+                <a href="https://github.com/carolinacase" target="_blank">
+                 <i class="ri-github-fill"></i>
+                </a>
+              <!-- Email -->
+                <a href="https://github.com/carolinacase" target="_blank">
+                 <i class="ri-github-fill"></i>
+                </a>
+            </div>
 
-    <div class="scroll-down">
-        <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
-    </div>
+            <div class="scroll-down">
+               <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+            </div>
 
-    <!-- Secciones del portafolio -->
-    <section id="about">
-        <h2>Sobre Mi...</h2>
-        <p>
-            En los ultimos años aprendí que todo proceso, ya sea administrativo o tecnológico,
+    <div class="main-container content">  
+
+        <!-- Secciones del portafolio -->
+
+        <section id="about">
+         <h2>Sobre Mi...</h2>
+        
+            <p>En los ultimos años aprendí que todo proceso, ya sea administrativo o tecnológico,
             tiene el potencial de ser mejorado con una visión clara y un enfoque constante 
             en la optimización. Mi experiencia en gestión en el sector de la construcción
             me enseñó a encontrar soluciones prácticas en medio del caos.</p>
@@ -106,38 +112,43 @@
             donde busco integrar mi amor por el aprendizaje con las nuevas 
             herramientas tecnológicas. Creo que cada cambio es una oportunidad 
             para reinventarse, y mi objetivo es seguir creciendo, encontrando
-            formas de simplificar y mejorar los procesos, mientras aprendo del mundo de la tecnología.
-        </p>
-    </section>
+            formas de simplificar y mejorar los procesos, mientras aprendo del mundo de la tecnología.</p>
+        
+        </section>
 
-    <section id="projects">
-        <h2>Mis Proyectos</h2>
-        <div class="projects-container">
-            <!-- Proyecto 1 -->
-            <div class="project-card">
+        <section id="projects">
+
+         <h2>Mis Proyectos</h2>
+
+            <div class="projects-container">
+
+             <!-- Proyecto 1 -->
+             <div class="project-card">
                 <img src="img/login.jpeg" alt="Login con validación JavaScript">
                 <p>Login hecho con JavaScript. Implementa validación de usuario y contraseña.</p>
                 <a href="https://login-con-validacion-javascript.netlify.app/" target="_blank" class="project-btn">Ver Proyecto</a>
-            </div>
-            <!-- Proyecto 2 -->
-            <div class="project-card">
+             </div>
+             <!-- Proyecto 2 -->
+             <div class="project-card">
                 <img src="img/formularioRegistro.jpeg" alt="Formulario con validación JavaScript">
                 <p>Formulario interactivo con validación en tiempo real usando JavaScript.</p>
                 <a href="https://formulario-con-validacion-javascript.netlify.app/" target="_blank" class="project-btn">Ver Proyecto</a>
-            </div>
-            <!-- Proyecto 3 -->
-            <div class="project-card">
+             </div>
+             <!-- Proyecto 3 -->
+             <div class="project-card">
                 <img src="img/redSocial.jpeg" alt="Simulación de Red Social">
                 <p>Simulación de una red social estándar, con funcionalidades básicas.</p>
                 <a href="https://simulacion-red-social.netlify.app/" target="_blank" class="project-btn">Ver Proyecto</a>
+             </div>
             </div>
-        </div>
-    </section>    
+        
+        </section>    
 
-    <section id="contact">
-        <h2>Contactame</h2>
+        <section id="contact">
+
+            <h2>Si quieres ponerte en contacto conmigo</h2>
     
-        <form action="#" method="POST" class="contact-form">
+            <form action="#" method="POST" class="contact-form">
             <label for="name">Nombre</label>
             <input type="text" id="name" name="name" required placeholder="Tu nombre">
     
@@ -148,14 +159,10 @@
             <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
     
             <button type="submit">Enviar</button>
-        </form>
-    </section>
-    
+            </form>
+        </section>
+    </div>
 
 </body>
-<footer>
-
-</footer>
-
 
 </html>

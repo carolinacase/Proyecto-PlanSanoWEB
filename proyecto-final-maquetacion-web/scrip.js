@@ -1,3 +1,43 @@
+document.addEventListener('DOMContentLoaded', function() {
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function() {
+        let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Ocultar el header y agregar fondo en navbar al hacer scroll
+            header.style.transform = 'translateY(-100%)';
+            navbar.classList.add('scrolled'); // Agrega la clase scrolled
+        } else {
+            // Mostrar el header y eliminar fondo en navbar al hacer scroll hacia arriba
+            header.style.transform = 'translateY(0)';
+            navbar.classList.remove('scrolled'); // Elimina la clase scrolled
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+});
+const texto = document.getElementById("escritura").innerText;  // Obtiene el texto del h3
+const h3 = document.getElementById("escritura");
+h3.innerText = "";  // Borra el contenido del h3 inicialmente
+
+let i = 0;
+const velocidad = 100;  // Tiempo en milisegundos entre cada letra
+
+// Función para agregar una letra cada vez
+const escribir = () => {
+  if (i < texto.length) {
+    h3.innerText += texto.charAt(i);  // Agrega una letra al h3
+    i++;
+  } else {
+    clearInterval(intervalo);  // Detiene el intervalo cuando se muestra todo el texto
+  }
+};
+
+const intervalo = setInterval(escribir, velocidad);  // Llama a la función 'escribir' cada 'velocidad' milisegundos
+
 // Crear el botón "Volver arriba"
 document.addEventListener('DOMContentLoaded', function () {
     const scrollButton = document.createElement('button');
